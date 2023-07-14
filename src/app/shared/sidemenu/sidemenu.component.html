@@ -1,0 +1,22 @@
+<div class="nav__container">
+  <div *ngFor="let navElement of navElements">
+    <div class="nav__item">
+      <div class="nav__btn" (click)="toggleExpansionPanel(navElement)">
+        <span>{{ navElement.tab }}</span>
+        <mat-icon class="nav__icon" *ngIf="navElement.metaTab">{{ navElement.expanded ? 'remove' : 'add' }}</mat-icon>
+      </div>
+      <div *ngIf="navElement.expanded">
+        <div class="meta-tab" *ngFor="let metaTab of navElement.metaTab">
+          <label class="meta-tab-label">
+            <a [routerLink]="metaTab.link" class="inside-tabs" (click)="checkCheckbox(navElement,metaTab)">
+              {{ metaTab.tab }}
+            </a>
+
+            <input type="checkbox" [checked]="metaTab.selected" (change)="toggleCheckbox(navElement, metaTab)">
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

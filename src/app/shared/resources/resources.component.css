@@ -1,0 +1,90 @@
+.resource__page {
+  padding: 20px;
+}
+
+.resource__page h2{
+  text-align: center;
+  margin: 10px;
+}
+
+.resource-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.resource-title{
+  width: 100%;
+  background-color: #ffc643;
+  padding: 5px;
+  height: 30px !important;
+  color: #005b9e;
+}
+
+.resource-title h3{
+  font-size: 16px;
+}
+
+.resource-item {
+  width: calc(25% - 20px); /* 25% width with 20px gap between items */
+  border: 1px solid #ccc;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  border-top: 3px solid blue;
+  cursor: pointer;
+}
+
+.resource-item:hover{
+  background-color: #ffc643;
+  transition: 0.3s ease-in;
+}
+
+.image-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px !important; /* Set a fixed height for the image container */
+  width: 150px !important;
+  padding: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.resource-text{
+  max-height: 60px;
+  overflow: hidden;
+  font-size: 12px;
+  padding: 4px;
+  }
+
+
+.responsive-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .resource-item {
+    width: calc(50% - 20px); /* 50% width with 20px gap between items */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resource-item {
+    width: 100%; /* 100% width on smaller screens */
+    height: auto; /* Reset the height for smaller screens */
+  }
+
+
+}
