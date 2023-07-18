@@ -2,7 +2,7 @@
   <app-header></app-header>
 
 
-<div class="middle__content">
+<div class="middle__content" *ngIf="!hideMiddleContent">
   <mat-drawer-container class="example-container" *ngIf="userLoggedIn">
     <mat-drawer mode="side" opened class="sidemenu">
       <app-sidemenu></app-sidemenu>
@@ -22,6 +22,9 @@
   <app-home-page *ngIf="!userLoggedIn"></app-home-page>
 </div>
 
+<div *ngIf="hideMiddleContent">
+  <router-outlet></router-outlet>
+</div>
  
 
 

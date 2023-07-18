@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { propertyFile } from 'propertyFile';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-sidemenu',
@@ -7,6 +8,8 @@ import { propertyFile } from 'propertyFile';
   styleUrls: ['./sidemenu.component.css']
 })
 export class SidemenuComponent {
+
+  constructor(private sharedService: SharedService) {}
 
   navElements = propertyFile?.navElements; 
 
@@ -29,6 +32,10 @@ export class SidemenuComponent {
       }
     });
     // Toggle the selected state of the clicked checkbox
+    console.log(metaTab);
+    //select meta tab 
+    this.sharedService.emitSelectedMetaTab(metaTab);
+
     metaTab.selected = !metaTab.selected;
   }
 

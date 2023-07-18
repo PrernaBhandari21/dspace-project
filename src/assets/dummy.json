@@ -1,0 +1,356 @@
+{
+  "status": 200,
+  "errorMessage": "..",
+  "data": [
+    {
+      "case Number": 1,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 2,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 3,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 4,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 5,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 6,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 7,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 8,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 9,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 10,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 11,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 12,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 13,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 14,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 15,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 16,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 17,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 18,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 19,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 20,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 21,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 22,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 23,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 24,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 25,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 26,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 27,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 28,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 29,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 30,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 31,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 32,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 33,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 34,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 35,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 36,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 37,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 38,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 39,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 40,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 41,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 42,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 43,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 44,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 45,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 46,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 47,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 48,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    },
+    {
+      "case Number": 49,
+      "case Title": "Lorem Ipsum",
+      "plaintiff": "John Doe",
+      "defendant": "Jane Doe",
+      "status": "Open"
+    },
+    {
+      "case Number": 50,
+      "case Title": "Dolor Sit Amet",
+      "plaintiff": "Alice Smith",
+      "defendant": "Bob Johnson",
+      "status": "Closed"
+    }
+  ]
+}

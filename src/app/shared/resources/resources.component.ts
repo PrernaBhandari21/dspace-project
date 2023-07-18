@@ -29,17 +29,14 @@ export class ResourcesComponent {
     },
     {
       title: 'Resource 4',
-      imagePath: 'path-to-image',
       data: 'Sample paragraph for Resource 4.'
     },
     {
       title: 'Resource 4',
-      imagePath: 'path-to-image',
       data: 'Sample paragraph for Resource 4.'
     },
     {
       title: 'Resource 4',
-      imagePath: 'path-to-image',
       data: 'Sample paragraph for Resource 4.'
     }
   ];

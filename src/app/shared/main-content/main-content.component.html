@@ -1,1 +1,36 @@
-<p>main-content works!</p>
+<div class="header mb-3">
+    <div class="heading">
+      <span>Home</span> >>
+      <span>Resources</span> >>
+      <span>{{ selectedMetaTab?.tab }}</span>
+    </div>
+    <div class="totalItems mt-2" *ngIf="selectedMetaTab?.totalCount">
+      <span>[{{ selectedMetaTab?.totalCount }} Items]</span>
+    </div>
+  </div>
+  
+  <div *ngIf="pagedData" class="data__items">
+    <div *ngFor="let item of pagedData">
+      <div class="item__container">
+        <img *ngIf="item.imgSrc" [src]="item.imgSrc" alt="ol">
+        <img *ngIf="!item.imgSrc" src="http://digilib.iicdelhi.in/jspui/bitstream/123456789/7580/2/Thumbnail_TIT_01.jpg" alt="ol">
+        <span class="item__title m-1" *ngIf="item.Title">{{ item.Title }}</span>
+        <span class="item__author m-1" *ngIf="item.Author">
+          <span>Author:</span> {{ item.Author }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!selectedMetaTab">
+    <div class="no-data-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/1079/1079536.png?w=740&t=st=1689583676~exp=1689584276~hmac=9bfe5415af18295912804a09de35c0d0e618294666f8c7d36eabfe6b2539dd8d" alt="No data">
+        <p>Please select a search type to get data.</p>
+      </div>
+  </div>
+
+
+  
+  <mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20, 50, 100]" (page)="onPageChange($event)"
+    showFirstLastButtons></mat-paginator>
+  

@@ -1,22 +1,28 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomePageComponent } from './main-components/home-page/home-page.component';
 import { SidemenuComponent } from './shared/sidemenu/sidemenu.component';
-import { LoginComponent } from './main-components/login/login.component';
 import { MainContentComponent } from './shared/main-content/main-content.component';
 import { ResourcesComponent } from './shared/resources/resources.component';
+import { AboutComponent } from './main-components/about/about.component';
+import { SignUpComponent } from './shared/sign-up/sign-up.component';
+import { TabularDataComponent } from './shared/tabular-data/tabular-data.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +30,12 @@ import { ResourcesComponent } from './shared/resources/resources.component';
     FooterComponent,
     HeaderComponent,
     HomePageComponent,
-    LoginComponent,
     SidemenuComponent,
     MainContentComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    AboutComponent,
+    SignUpComponent,
+    TabularDataComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +45,10 @@ import { ResourcesComponent } from './shared/resources/resources.component';
     MatListModule,
     MatExpansionModule,
     BrowserAnimationsModule,
+    NgxSpinnerModule,
+    MatPaginatorModule,
+    MatTableModule,
+    HttpClientModule
 
   ],
   providers: [],

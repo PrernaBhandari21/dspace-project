@@ -10,7 +10,8 @@
 
       <div class="responsive-content">
         <div class="image-container">
-          <img [src]="resource.imagePath" alt="Resource Image">
+          <img *ngIf="resource.imagePath" [src]="resource.imagePath" alt="Resource Image">
+          <img *ngIf="!resource.imagePath" src="http://digilib.iicdelhi.in/jspui/images/pic-journal.jpg" alt="photo">
         </div>
         <div class="resource-text">
           

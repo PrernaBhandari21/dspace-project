@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -7,14 +8,14 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+constructor(private authService : AuthService,private route : Router){}
 
-  constructor(private authService : AuthService){
-    
-  }
-
-  login(){
+  login() {
     this.authService.login();
+    this.route.navigate([""])
   }
 
-
+  signUp(){
+    this.route.navigate(['sign-up'])
+  }
 }

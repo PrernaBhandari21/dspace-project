@@ -1,0 +1,9 @@
+.display__center{
+    margin: auto;
+}
+
+.display__center h3{
+    color: #005b9e;
+    font-weight: bold;
+    font-size: 20px;
+}

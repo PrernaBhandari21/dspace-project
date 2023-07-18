@@ -3,12 +3,12 @@ export const propertyFile = {
       {
         tab: 'Search By',
         metaTab: [
-          { tab: 'Case Type', link: '/searchBy-case-type'  ,selected: false},
-          { tab: 'Petitioner/Respondent', link: '/searchBy-petitioner-respondent' ,selected: false },
-          { tab: 'Date Of Final Order', link: '/searchBy-final-order' ,selected: false},
-          { tab: 'Judge(s) Name', link: '/searchBy-judge-name'  ,selected: false},
-          { tab: 'Keywords', link:'/searchBy-keyword-search' ,selected: false},
-          {tab : 'Free Text', link:'/searchBy-free-text-search' ,selected: false}
+          { tab: 'Case Type', link: '/searchBy-case-type'  ,selected: false, "totalCount": 11},
+          { tab: 'Petitioner/Respondent', link: '/searchBy-petitioner-respondent' ,selected: false, "totalCount": 12 },
+          { tab: 'Date Of Final Order', link: '/searchBy-final-order' ,selected: false , "totalCount": 10},
+          { tab: 'Judge(s) Name', link: '/searchBy-judge-name'  ,selected: false, "totalCount": 12},
+          { tab: 'Keywords', link:'/searchBy-keyword-search' ,selected: false, "totalCount": 19},
+          {tab : 'Free Text', link:'/searchBy-free-text-search' ,selected: false, "totalCount": 12}
 
         ],
         expanded: false,
@@ -16,7 +16,7 @@ export const propertyFile = {
       {
         tab: 'Search Admin Records By',
         metaTab: [
-          { tab: 'Books', link: '/searchAdminBy-books' ,selected: false },
+          { tab: 'Books', link: '/searchAdminBy-books' ,selected: false , "totalCount": 102},
           { tab: 'Acts', link: '/searchAdminBy-act'  ,selected: false},
           { tab: 'Notice Notifications', link: '/searchAdminBy-notice' ,selected: false},
           { tab: 'Emails', link: '/searchAdminBy-email' ,selected: false},
