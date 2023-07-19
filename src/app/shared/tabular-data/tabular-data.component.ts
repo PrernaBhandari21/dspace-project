@@ -22,7 +22,7 @@ export class TabularDataComponent {
   pageIndex: number = 0;
   pageSize: number = 10;
   pagedData: any[] = [];
-
+  response!: any;
   constructor(private sharedService: SharedService) {}
 
   ngOnInit() {
@@ -37,16 +37,16 @@ export class TabularDataComponent {
   }
 
   updatePageData() {
-    const response = {
+    this.response = {
       status: data.status,
       errorMessage: data.errorMessage,
       data: data.data // Accessing the data array directly from dummy.json
     };
 
-    console.log("response," , response);
+    console.log("response," , this.response);
 
-    if (response.status === 200) {
-      this.dataSource.data = response.data;
+    if (this.response.status === 200) {
+      this.dataSource.data = this.response.data;
       this.displayedColumns = Object.keys(this.dataSource.data[0]);
       console.log("this.dataSource," , this.dataSource);
       console.log("this.displayedColumns," , this.displayedColumns);
@@ -68,7 +68,7 @@ export class TabularDataComponent {
       this.dataSource.paginator = this.paginator; // Set the paginator for proper handling
       this.updatePagedData();
     } else {
-      this.errorMessage = response.errorMessage;
+      this.errorMessage = this.response.errorMessage;
       console.log("this.errorMessage : ",this.errorMessage);
     }
   }

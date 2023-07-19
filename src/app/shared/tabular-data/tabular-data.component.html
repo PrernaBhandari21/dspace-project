@@ -1,25 +1,24 @@
 <div class="container" *ngIf="selectedMetaTab">
 
-  <div class="heading">
-    <span>Home</span> >>
-    <span>Resources</span> >>
-    <span>{{ selectedMetaTab?.tab }}</span>
-  </div>
-  <div class="totalItems mt-2" *ngIf="selectedMetaTab?.totalCount">
-    <span>[{{ selectedMetaTab?.totalCount }} Items]</span>
-  </div>
-
-
+  <div  *ngIf="!errorMessage.length">
+    <div class="heading" >
+      <span>Home</span> >>
+      <span>Resources</span> >>
+      <span>{{ selectedMetaTab?.tab }}</span>
+    </div>
+    <div class="totalItems mt-2" *ngIf="selectedMetaTab?.totalCount">
+      <span>[{{ selectedMetaTab?.totalCount }} Items]</span>
+    </div>
 
     <div style="display: flex; justify-content: end;">
-        <div class="filter">
-            <span>Filter</span>
-            <input (keyup)="applyFilter($event)" placeholder="Ex. Case" #input />
-            <button type="button" class="btn btn-secondary btn-sm ml-2" (click)="onFilterClear()">Clear</button>
-        </div> 
-    </div>
+      <div class="filter">
+          <span>Filter</span>
+          <input (keyup)="applyFilter($event)" placeholder="Ex. Case" #input />
+          <button type="button" class="btn btn-secondary btn-sm ml-2" (click)="onFilterClear()">Clear</button>
+      </div> 
+  </div>
+  </div>
         
-    
   
     <table mat-table [dataSource]="dataSource" *ngIf="!errorMessage.length" class="mat-elevation-z8">
       <!-- Table headers -->
@@ -34,8 +33,14 @@
     </table>
   
     <div *ngIf="errorMessage.length" class="error-block">
-      <p>Error retrieving data! Please try again.</p>
+      <!-- For 404 status code  -->
+      <img *ngIf="response?.status == 404" src="../../../assets/images/Error-404.png"  alt="">
+      <img *ngIf="response?.status !== 404" class="default-error-pic" src="../../../assets/images/Error.png"  alt="">
+      <p>{{response?.errorMessage}}</p>
     </div>
+
+
+
   </div>
   
 
@@ -47,7 +52,7 @@
   </div>
 
 
-  <mat-paginator
+  <mat-paginator  *ngIf="!errorMessage.length"
     [length]="totalItems"
     [pageSize]="pageSize"
     [pageSizeOptions]="[5, 10, 20, 50, 100]"

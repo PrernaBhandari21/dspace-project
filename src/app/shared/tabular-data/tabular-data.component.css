@@ -1,7 +1,6 @@
-.container {
-    margin: 20px;
+  .container{
+    overflow: auto;
   }
-  
   .heading{
     font-size: 20px;
     font-weight: 500;
@@ -22,7 +21,14 @@
   
   .error-block {
     color: red;
-    font-weight: bold;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-block img{
+    margin-bottom: 10px;
   }
   
   table {
@@ -53,9 +59,28 @@
   }
 
   .no-data-container img{
-    width: 40%;
+    width: 35%;
   }
 
   .no-data-container p{
     font-weight: 500;
+  }
+
+  .default-error-pic{
+    width: 500px;
+  }
+
+  @media screen and (max-width : 630px) {
+
+    .default-error-pic{
+        width: 400px;
+      }
+  }
+
+  @media screen and (max-width : 400px) {
+
+      .default-error-pic{
+    width: 350px;
+  }
+
   }

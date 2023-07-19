@@ -1,6 +1,6 @@
 {
   "status": 200,
-  "errorMessage": "..",
+  "errorMessage": "Error retrieving data ! Please try again later.",
   "data": [
     {
       "case Number": 1,
