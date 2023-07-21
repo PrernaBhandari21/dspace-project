@@ -13,7 +13,9 @@ export class HeaderComponent {
     private route : Router){}
 
   logout() {
-    this.authService.logout();
+    // this.authService.logout();
+
+    this.route.navigate([""])
   }
 
   login(){

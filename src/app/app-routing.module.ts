@@ -11,8 +11,14 @@ const routes: Routes = [
   // {path:'',
   // component:MainContentComponent  
   // },
-  {path:'',
-  component:TabularDataComponent  
+  // {path:'',
+  // component:TabularDataComponent  
+  // },
+
+  {
+    path:'',
+    component:HomePageComponent,
+     data: { hideMiddleContent : true } 
   },
   {
     path:"login",
@@ -28,7 +34,16 @@ const routes: Routes = [
     path:"sign-up",
     component:SignUpComponent,
     data: { hideMiddleContent : true } 
-  }
+  },
+  {
+    path:"tabular-data",
+    component:TabularDataComponent,
+    }
+  // {
+  //   path:"home-page",
+  //   component:HomePageComponent,
+  //    data: { hideMiddleContent : true } 
+  // }
 ];
 
 @NgModule({

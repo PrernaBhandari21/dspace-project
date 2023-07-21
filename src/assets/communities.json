@@ -1,0 +1,61 @@
+[
+    {
+        "community": "Case Type",
+        "totalItems": 16,
+        "filters": [
+          {
+            "filterName": "Author",
+            "filterValues": [
+              { "name": "Author Name 1", "count": 4 },
+              { "name": "Author Name 2", "count": 8 },
+              { "name": "Author Name 3", "count": 4 }
+            ]
+          },
+          {
+            "filterName": "Description",
+            "filterValues": [
+              { "name": "110p", "count": 8 },
+              { "name": "36p", "count": 8 }
+            ]
+          },
+          {
+            "filterName": "Type",
+            "filterValues": [
+              { "name": "Report", "count": 12 },
+              { "name": "Annual Report", "count": 4 }
+            ]
+          }
+        ]
+      },
+
+      {
+        "community": "Petitioner / Respondent ",
+        "totalItems": 12,
+        "filters": [
+          {
+            "filterName": "Case Type",
+            "filterValues": [
+              { "name": "Author Name 1", "count": 6 },
+              { "name": "Author Name 2", "count": 4 },
+              { "name": "Author Name 3", "count": 2 }
+            ]
+          },
+          {
+            "filterName": "Description",
+            "filterValues": [
+              { "name": "110p", "count": 10 },
+              { "name": "36p", "count": 2 }
+            ]
+          },
+          {
+            "filterName": "Type",
+            "filterValues": [
+              { "name": "Report", "count": 2 },
+              { "name": "Annual Report", "count": 10 }
+            ]
+          }
+        ]
+      }
+      
+      
+]
