@@ -9,7 +9,14 @@ export class SharedService {
 
   selectedMetaTabChanged: EventEmitter<string> = new EventEmitter<string>();
 
-  emitSelectedMetaTab(metaTab: string) {
-    this.selectedMetaTabChanged.emit(metaTab);
+  // For single sidemenu element to be emitted !!
+
+  // emitSelectedMetaTab(metaTab: string) {
+  //   this.selectedMetaTabChanged.emit(metaTab);
+  // }
+
+  emitSelectedMetaTab(tabElements : any) {
+    console.log("tabElement selected are : ", tabElements);
+    this.selectedMetaTabChanged.emit(tabElements);
   }
 }

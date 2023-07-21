@@ -1,13 +1,33 @@
-<div class="container" *ngIf="selectedMetaTab">
+<!-- <div class="container" *ngIf="selectedMetaTab"> -->
+  
+<!-- For multiple selection of tabs -->
+  <div class="container" *ngIf="tabsSelected?.length" >
 
   <div  *ngIf="!errorMessage.length">
     <div class="heading" >
       <span>Home</span> >>
       <span>Resources</span> >>
-      <span>{{ selectedMetaTab?.tab }}</span>
+      <!-- <span >{{ selectedMetaTab?.tab }}</span> -->
+
+      <!-- For multiple selection of tabs -->
+      <span  *ngIf="tabsSelected?.length == 1">{{ tabsSelected[0]?.tab }}</span>
+      <span *ngIf="tabsSelected?.length > 1">
+        <ng-container *ngFor="let tab of tabsSelected; let last = last">
+          {{ tab.tab }}<span *ngIf="!last"> + </span>
+        </ng-container>
+      </span>
+     
     </div>
-    <div class="totalItems mt-2" *ngIf="selectedMetaTab?.totalCount">
-      <span>[{{ selectedMetaTab?.totalCount }} Items]</span>
+    <!-- <div class="totalItems mt-2" *ngIf="selectedMetaTab?.totalCount"> -->
+
+      <!-- For multiple selection of tabs --> 
+      <div class="totalItems mt-2">
+      <!-- <span>[{{ selectedMetaTab?.totalCount }} Items]</span> -->
+      <!-- For multiple selection of tabs -->
+      <span *ngIf="tabsSelected?.length == 1">[{{ tabsSelected[0]?.totalCount }} Items]</span>
+      <span *ngIf="tabsSelected?.length > 1">
+        [Total: {{ getTotalCount() }} Items]
+      </span>
     </div>
 
     <div style="display: flex; justify-content: end;">
@@ -16,7 +36,8 @@
           <input (keyup)="applyFilter($event)" placeholder="Ex. Case" #input />
           <button type="button" class="btn btn-secondary btn-sm ml-2" (click)="onFilterClear()">Clear</button>
       </div> 
-  </div>
+    </div>
+
   </div>
         
   
@@ -44,12 +65,15 @@
   </div>
   
 
-  <div *ngIf="!selectedMetaTab">
+  <!--
+    show blank message if no one is selected !! 
+
+    <div *ngIf="!selectedMetaTab">
     <div class="no-data-container">
         <img src="https://cdn-icons-png.flaticon.com/512/1079/1079536.png?w=740&t=st=1689583676~exp=1689584276~hmac=9bfe5415af18295912804a09de35c0d0e618294666f8c7d36eabfe6b2539dd8d" alt="No data">
         <p>Please select a search type to get data.</p>
       </div>
-  </div>
+  </div> -->
 
 
   <mat-paginator  *ngIf="!errorMessage.length"

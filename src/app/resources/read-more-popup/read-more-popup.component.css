@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.read-more-container{
+    padding: 20px;
+}
+
+.heading{
+    font-size: 22px !important;
+    line-height: 28px;
+    font-weight: 600 !important;
+    text-transform: none;
+    color: #005b9e;
+    text-decoration: underline;
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+}

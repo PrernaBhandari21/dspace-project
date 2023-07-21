@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +24,7 @@ import { ResourcesComponent } from './shared/resources/resources.component';
 import { AboutComponent } from './main-components/about/about.component';
 import { SignUpComponent } from './shared/sign-up/sign-up.component';
 import { TabularDataComponent } from './shared/tabular-data/tabular-data.component';
+import { ReadMorePopupComponent } from './resources/read-more-popup/read-more-popup.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { TabularDataComponent } from './shared/tabular-data/tabular-data.compone
     ResourcesComponent,
     AboutComponent,
     SignUpComponent,
-    TabularDataComponent
+    TabularDataComponent,
+    ReadMorePopupComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { TabularDataComponent } from './shared/tabular-data/tabular-data.compone
     NgxSpinnerModule,
     MatPaginatorModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
 
   ],
   providers: [],

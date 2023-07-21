@@ -3,19 +3,21 @@
   <h2>Resources</h2>
 
   <div class="resource-row">
-    <div class="resource-item" *ngFor="let resource of resources" (click)="openContent(resource)">
-      <div class="resource-title">
-        <h3>{{ resource.title }}</h3>
+    <div class="resource-item" *ngFor="let resource of resources" >
+      <div class="resource-title" (click)="openContent(resource)">
+        <h3>{{ resource.tab }}</h3>
       </div>
 
       <div class="responsive-content">
-        <div class="image-container">
+        <div class="image-container" (click)="openContent(resource)">
           <img *ngIf="resource.imagePath" [src]="resource.imagePath" alt="Resource Image">
           <img *ngIf="!resource.imagePath" src="http://digilib.iicdelhi.in/jspui/images/pic-journal.jpg" alt="photo">
         </div>
         <div class="resource-text">
           
-            <p>{{ resource.data }}</p>
+            <p *ngIf="resource.info.length <= 80">{{ resource.info }}</p>
+            <p *ngIf="resource.info.length > 80">{{ resource.info | slice:0:80 }} <span (click)="readMore(resource)" class="read-more-text">...Read More</span></p>
+
          
         </div>
       </div>

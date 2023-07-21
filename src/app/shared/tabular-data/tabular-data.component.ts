@@ -3,6 +3,7 @@ import data from '../../../assets/dummy.json';
 import { MatTableDataSource } from '@angular/material/table';
 import { SharedService } from 'src/app/services/shared.service';
 import { PageEvent, MatPaginator } from '@angular/material/paginator'; // Import the PageEvent and MatPaginator
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tabular-data',
@@ -23,19 +24,29 @@ export class TabularDataComponent {
   pageSize: number = 10;
   pagedData: any[] = [];
   response!: any;
+  tabsSelected: any;
+
+  private selectedMetaTabSubscription: Subscription | undefined;
+
+
   constructor(private sharedService: SharedService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     this.getData();
   }
 
   getData() {
-    this.sharedService.selectedMetaTabChanged.subscribe((metaTab: string) => {
-      this.selectedMetaTab = metaTab;
-      this.updatePageData();
-    });
+    this.selectedMetaTabSubscription = this.sharedService.selectedMetaTabChanged.subscribe(
+      (tabsSelected: any) => {
+        console.log("Received elements are ============> ", tabsSelected);
+        this.tabsSelected = tabsSelected;
+        console.log("Length inside : ", this.tabsSelected);
+        this.updatePageData();
+      }
+    );
   }
-
+  
+  
   updatePageData() {
     this.response = {
       status: data.status,
@@ -48,8 +59,8 @@ export class TabularDataComponent {
     if (this.response.status === 200) {
       this.dataSource.data = this.response.data;
       this.displayedColumns = Object.keys(this.dataSource.data[0]);
-      console.log("this.dataSource," , this.dataSource);
-      console.log("this.displayedColumns," , this.displayedColumns);
+      // console.log("this.dataSource," , this.dataSource);
+      // console.log("this.displayedColumns," , this.displayedColumns);
 
       // Add the hardcoded "Action" column
       // this.displayedColumns.push('action');
@@ -69,7 +80,7 @@ export class TabularDataComponent {
       this.updatePagedData();
     } else {
       this.errorMessage = this.response.errorMessage;
-      console.log("this.errorMessage : ",this.errorMessage);
+      // console.log("this.errorMessage : ",this.errorMessage);
     }
   }
 
@@ -94,5 +105,15 @@ export class TabularDataComponent {
     this.pageIndex = event.pageIndex;
     this.pageSize = event.pageSize;
     this.updatePagedData();
+  }
+
+  getTotalCount(){
+    return this.tabsSelected.reduce((total : any,tab : any) => total + (tab.totalCount ? tab.totalCount : 0) ,0);
+  }
+
+  ngOnDestroy() {
+    if (this.selectedMetaTabSubscription) {
+      this.selectedMetaTabSubscription.unsubscribe();
+    }
   }
 }

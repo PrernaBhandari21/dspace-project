@@ -18,13 +18,15 @@
 .resource-title{
   width: 100%;
   background-color: #ffc643;
-  padding: 5px;
-  height: 30px !important;
+  padding: 10px;
+  height: 60px !important;
   color: #005b9e;
+  cursor: pointer;
 }
 
 .resource-title h3{
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .resource-item {
@@ -36,7 +38,7 @@
   position: relative;
   align-items: center;
   border-top: 3px solid blue;
-  cursor: pointer;
+  
 }
 
 .resource-item:hover{
@@ -52,6 +54,7 @@
   height: 200px !important; /* Set a fixed height for the image container */
   width: 150px !important;
   padding: 10px;
+  cursor: pointer;
 }
 
 .image-container img {
@@ -74,7 +77,13 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+.read-more-text{
+  color: #005b9e;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 940px) {
   .resource-item {
     width: calc(50% - 20px); /* 50% width with 20px gap between items */
   }
