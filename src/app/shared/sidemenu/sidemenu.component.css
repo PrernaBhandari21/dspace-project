@@ -67,3 +67,34 @@ a {
    .meta-tab label input{
     width: 15px;
    }
+
+   .admin_nav_container{
+    padding: 15px;
+   }
+
+   .admin__heading{
+    text-transform: uppercase;
+  }
+
+  .admin_nav_container ul{
+    list-style: none;
+    padding: 5px;
+  }
+
+  .admin_nav_container ul li{
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+  }
+
+  .admin_nav_container ul li a{
+    text-decoration: none;
+    color: #191616;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .admin_nav_container ul li a.active,
+.admin_nav_container ul li a:hover {
+  color: #004080; 
+}

@@ -9,7 +9,7 @@ export class AuthService {
 
   constructor(private router : Router){}
 
-  role : string = "user";
+  role : string = "admin";
   private userLoggedInSubject = new Subject<boolean>();
   userLoggedIn$ = this.userLoggedInSubject.asObservable();
 

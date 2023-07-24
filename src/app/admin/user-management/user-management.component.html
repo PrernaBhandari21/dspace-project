@@ -1,0 +1,121 @@
+<div class="admin_main_heading">
+    <h1>Admin Panel >> User Management</h1>
+  </div>
+  
+  <h2 class="table-heading">User Management</h2>
+
+  <div class="filter-container">
+    <!-- Filter by Status -->
+
+    
+
+    <div>
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="selectedStatus" (ngModelChange)="filterData()">
+          <mat-option value="all">All Users</mat-option>
+          <mat-option value="Active">Active Users</mat-option>
+          <mat-option value="Deactivate">Deactivate Users</mat-option>
+          <mat-option value="Pending for Approval">Pending for Approval</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <!-- Filter by Group -->
+      <mat-form-field>
+        <mat-label>Group</mat-label>
+        <mat-select [(ngModel)]="selectedGroup" (ngModelChange)="filterData()">
+          <mat-option value="all">All Groups</mat-option>
+          <mat-option value="Group A">Group A</mat-option>
+          <mat-option value="Group B">Group B</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+  
+      <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchQuery" (ngModelChange)="filterData()" placeholder="Enter search term">
+      </mat-form-field>
+  
+      <button type="button" class="btn btn-info mb-3 flex">
+        <span style="display: flex;">
+          <mat-icon>add</mat-icon>
+          <span>Add User</span> 
+        </span>
+      </button>
+    </div>
+    
+
+  </div>
+  
+  <mat-table [dataSource]="filteredDataSource" class="table-wrapper">
+    <!-- Define the First Name column -->
+    <ng-container matColumnDef="first Name">
+      <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element['first Name'] }} </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Last Name column -->
+    <ng-container matColumnDef="last Name">
+      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element['last Name'] }} </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Email column with expanded view -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <div class="expanded-email">{{ element['email'] }}</div>
+      </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Last Login column -->
+    <ng-container matColumnDef="last Login">
+      <mat-header-cell *matHeaderCellDef> Last Login </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element['last Login'] }} </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Active Since column -->
+    <ng-container matColumnDef="active Since">
+      <mat-header-cell *matHeaderCellDef> Active Since </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element['active Since'] }} </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Membership Validity column -->
+    <ng-container matColumnDef="membership Validity">
+      <mat-header-cell *matHeaderCellDef> Membership Validity </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element['membership Validity'] }} </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Group column -->
+    <ng-container matColumnDef="group">
+      <mat-header-cell *matHeaderCellDef> Group </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element['group'] }} </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Status column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element['status'] }} </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Password Reset column -->
+    <ng-container matColumnDef="password Reset">
+      <mat-header-cell *matHeaderCellDef> Password Reset </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-icon>lock</mat-icon>
+      </mat-cell>
+    </ng-container>
+  
+    <!-- Define the Edit column -->
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-icon>edit</mat-icon>
+      </mat-cell>
+    </ng-container>
+  
+    <!-- Add the columns to the table -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { propertyFile } from 'propertyFile';
 import { SharedService } from 'src/app/services/shared.service';
 import sideMenuContent from '../../../assets/sideMenuContent.json';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-sidemenu',
@@ -9,18 +10,43 @@ import sideMenuContent from '../../../assets/sideMenuContent.json';
   styleUrls: ['./sidemenu.component.css']
 })
 export class SidemenuComponent implements OnInit {
+  userRole!: string;
 
-  constructor(private sharedService: SharedService) {}
- 
+  constructor(private sharedService: SharedService,
+    private authService: AuthService) {}
 
-  ngOnInit(): void {
-    // this.toggleCheckbox();
-  }
+    navElements: any[] = []; 
+    tabsSelected: any[] = [];
+
+    adminNavElements : any[] = [
+      {elementName : "Dashboard", elementLink : "admin-dashboard"},
+      {elementName : "User Management", elementLink : "admin-user-management"},
+      {elementName : "User Data Upload", elementLink : "admin-user-data-upload"},
+      {elementName : "Reports", elementLink : "admin-reports"},
+    ]
+
+    ngOnInit(): void {
+      this.userRole = this.authService.role;
+      console.log("Got role as ==>", this.userRole);
+  
+      if (this.userRole !== 'admin') {
+        // Initialize everything for non-'admin' users
+        this.navElements = sideMenuContent?.navElements;
+        this.tabsSelected = [];
+      } else {
+        // For 'admin' users, show admin content
+
+      }
+    }
 
   // navElements = propertyFile?.navElements; 
-  navElements = sideMenuContent?.navElements;
 
-  tabsSelected : any = [];
+
+
+  // navElements = sideMenuContent?.navElements;
+  // tabsSelected : any = [];
+
+
 
   //checkk
   // tabsSelected :any =[{"imagePath"
@@ -60,40 +86,40 @@ export class SidemenuComponent implements OnInit {
 
 
 // If we want to click single checkbox at a time ==>
-  // toggleCheckbox(navElement: any, metaTab: any) {
-  //   // Deselect other checkboxes when one is selected
-  //   navElement.metaTab.forEach((tab:any) => {
-  //     if (tab !== metaTab) {
-  //       tab.selected = false;
-  //     }
-  //   });
-  //   // Toggle the selected state of the clicked checkbox
-  //   console.log(metaTab);
-  //   //select meta tab 
-  //   this.sharedService.emitSelectedMetaTab(metaTab);
+  toggleCheckbox(navElement: any, metaTab: any) {
+    // Deselect other checkboxes when one is selected
+    navElement.metaTab.forEach((tab:any) => {
+      if (tab !== metaTab) {
+        tab.selected = false;
+      }
+    });
+    // Toggle the selected state of the clicked checkbox
+    console.log(metaTab);
+    //select meta tab 
+    this.sharedService.emitSelectedMetaTab(metaTab);
 
-  //   metaTab.selected = !metaTab.selected;
-  // }
+    metaTab.selected = !metaTab.selected;
+  }
 
 
   // For multiple selected of checkboxes !
-  toggleCheckbox(navElement: any, metaTab: any) {
-    // Check if metaTab is already selected
-    const index = this.tabsSelected.indexOf(metaTab);
+  // toggleCheckbox(navElement: any, metaTab: any) {
+  //   // Check if metaTab is already selected
+  //   const index = this.tabsSelected.indexOf(metaTab);
   
-    if (index !== -1) {
-      // If metaTab is already selected, remove it from the array
-      this.tabsSelected.splice(index, 1);
-      metaTab.selected = false; // Update the selected state of the metaTab
-    } else {
-      // If metaTab is not selected, add it to the array
-      this.tabsSelected.push(metaTab);
-      metaTab.selected = true; // Update the selected state of the metaTab
-    }
+  //   if (index !== -1) {
+  //     // If metaTab is already selected, remove it from the array
+  //     this.tabsSelected.splice(index, 1);
+  //     metaTab.selected = false; // Update the selected state of the metaTab
+  //   } else {
+  //     // If metaTab is not selected, add it to the array
+  //     this.tabsSelected.push(metaTab);
+  //     metaTab.selected = true; // Update the selected state of the metaTab
+  //   }
   
-    // Emit the updated tabsSelected array
-    this.sharedService.emitSelectedMetaTab(this.tabsSelected);
-  }
+  //   // Emit the updated tabsSelected array
+  //   this.sharedService.emitSelectedMetaTab(this.tabsSelected);
+  // }
   
 
 

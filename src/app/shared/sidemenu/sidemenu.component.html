@@ -1,4 +1,4 @@
-<div class="nav__container">
+<div class="nav__container" *ngIf="userRole!=='admin'">
   <div *ngFor="let navElement of navElements">
     <div class="nav__item">
       <div class="nav__btn" (click)="toggleExpansionPanel(navElement)">
@@ -16,5 +16,17 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+<div class="admin_nav_container" *ngIf="userRole === 'admin'">
+  <div>
+    <h2 class="admin__heading">Admin Panel</h2>
+    <ul>
+      <li *ngFor="let element of adminNavElements">
+        <a [routerLink]="[element.elementLink]">{{ element.elementName }}</a>
+      </li>
+    </ul>
   </div>
 </div>

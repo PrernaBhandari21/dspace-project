@@ -38,7 +38,11 @@ export class TabularDataComponent {
   getData() {
     this.selectedMetaTabSubscription = this.sharedService.selectedMetaTabChanged.subscribe(
       (tabsSelected: any) => {
-        console.log("Received elements are ============> ", tabsSelected);
+        // console.log("Received elements are ============> ", tabsSelected);
+
+        //for single tab
+        this.selectedMetaTab = tabsSelected;
+
         this.tabsSelected = tabsSelected;
         console.log("Length inside : ", this.tabsSelected);
         this.updatePageData();

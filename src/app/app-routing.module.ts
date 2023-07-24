@@ -7,6 +7,7 @@ import { AboutComponent } from './main-components/about/about.component';
 import { SignUpComponent } from './shared/sign-up/sign-up.component';
 import { TabularDataComponent } from './shared/tabular-data/tabular-data.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { UserManagementComponent } from './admin/user-management/user-management.component';
 
 const routes: Routes = [
   // {path:'',
@@ -50,6 +51,10 @@ const routes: Routes = [
   {
     path:"admin-dashboard", 
     component:DashboardComponent
+  },
+  {
+    path:"admin-user-management", 
+    component:UserManagementComponent
   }
 ];
 

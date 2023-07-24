@@ -1,33 +1,34 @@
-<!-- <div class="container" *ngIf="selectedMetaTab"> -->
+<div class="container" *ngIf="selectedMetaTab">
   
 <!-- For multiple selection of tabs -->
-  <div class="container" *ngIf="tabsSelected?.length" >
+  <!-- <div class="container" *ngIf="tabsSelected?.length" > -->
 
   <div  *ngIf="!errorMessage.length">
     <div class="heading" >
       <span>Home</span> >>
       <span>Resources</span> >>
-      <!-- <span >{{ selectedMetaTab?.tab }}</span> -->
+      <span >{{ selectedMetaTab?.tab }}</span>
 
       <!-- For multiple selection of tabs -->
-      <span  *ngIf="tabsSelected?.length == 1">{{ tabsSelected[0]?.tab }}</span>
+      <!-- <span  *ngIf="tabsSelected?.length == 1">{{ tabsSelected[0]?.tab }}</span>
       <span *ngIf="tabsSelected?.length > 1">
         <ng-container *ngFor="let tab of tabsSelected; let last = last">
           {{ tab.tab }}<span *ngIf="!last"> + </span>
         </ng-container>
-      </span>
+      </span> -->
      
     </div>
-    <!-- <div class="totalItems mt-2" *ngIf="selectedMetaTab?.totalCount"> -->
+    <div class="totalItems mt-2" *ngIf="selectedMetaTab?.totalCount">
 
       <!-- For multiple selection of tabs --> 
-      <div class="totalItems mt-2">
-      <!-- <span>[{{ selectedMetaTab?.totalCount }} Items]</span> -->
+      <!-- <div class="totalItems mt-2"> -->
+
+      <span>[{{ selectedMetaTab?.totalCount }} Items]</span>
       <!-- For multiple selection of tabs -->
-      <span *ngIf="tabsSelected?.length == 1">[{{ tabsSelected[0]?.totalCount }} Items]</span>
+      <!-- <span *ngIf="tabsSelected?.length == 1">[{{ tabsSelected[0]?.totalCount }} Items]</span>
       <span *ngIf="tabsSelected?.length > 1">
         [Total: {{ getTotalCount() }} Items]
-      </span>
+      </span> -->
     </div>
 
     <div style="display: flex; justify-content: end;">

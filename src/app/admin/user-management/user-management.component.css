@@ -1,0 +1,55 @@
+mat-header-row {
+    height: 40px;
+    background: #115395!important;
+    font-size: 15px;
+  }
+
+mat-header-cell{
+    color: #fff;
+  }
+  
+.mat-column-email {
+    flex: 1 1 165px; 
+    white-space: normal; 
+    word-break: break-word; 
+  }
+
+  mat-row{
+    font-size: 14px;
+  }
+
+  mat-row:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+
+  mat-row:nth-child(odd):hover{
+    background-color: #f2f2f2;
+  }
+
+  .mat-column-edit {
+    flex: 0 0 60px;
+  }
+
+  .mat-column-last-login,
+.mat-column-active-since {
+  flex: 0 0 100px;
+}
+
+.filter-container{
+  text-align: end;
+}
+
+.filter-container mat-form-field{
+  height: 70px;
+  margin-right: 10px;
+}
+
+.table-heading{
+  font-size: 22px !important;
+    color: #000;
+    margin: 0px;
+    text-transform: none;
+    line-height: normal !important;
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+}

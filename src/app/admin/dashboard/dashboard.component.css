@@ -1,0 +1,9 @@
+.admin_main_heading h1{
+    font-size: 24px !important;
+    margin: 0px 0px 20px 0px !important;
+    padding: 0px;
+    line-height: 28px;
+    font-weight: 500 !important;
+    text-transform: none;
+    color: #005b9e;
+}
