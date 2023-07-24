@@ -11,8 +11,8 @@ export class LoginComponent {
 constructor(private authService : AuthService,private route : Router){}
 
   login() {
-    // this.authService.login();
-    this.route.navigate(["tabular-data"])
+    this.authService.login();
+    // this.route.navigate(["tabular-data"])
   }
 
   signUp(){

@@ -25,6 +25,7 @@ import { AboutComponent } from './main-components/about/about.component';
 import { SignUpComponent } from './shared/sign-up/sign-up.component';
 import { TabularDataComponent } from './shared/tabular-data/tabular-data.component';
 import { ReadMorePopupComponent } from './resources/read-more-popup/read-more-popup.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReadMorePopupComponent } from './resources/read-more-popup/read-more-po
     AboutComponent,
     SignUpComponent,
     TabularDataComponent,
-    ReadMorePopupComponent
+    ReadMorePopupComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

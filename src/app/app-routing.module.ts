@@ -6,6 +6,7 @@ import { LoginComponent } from './shared/login/login.component';
 import { AboutComponent } from './main-components/about/about.component';
 import { SignUpComponent } from './shared/sign-up/sign-up.component';
 import { TabularDataComponent } from './shared/tabular-data/tabular-data.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   // {path:'',
@@ -38,12 +39,18 @@ const routes: Routes = [
   {
     path:"tabular-data",
     component:TabularDataComponent,
-    }
+    },
+
   // {
   //   path:"home-page",
   //   component:HomePageComponent,
   //    data: { hideMiddleContent : true } 
   // }
+
+  {
+    path:"admin-dashboard", 
+    component:DashboardComponent
+  }
 ];
 
 @NgModule({
