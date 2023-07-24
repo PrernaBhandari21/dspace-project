@@ -31,6 +31,7 @@ import { TabularDataComponent } from './shared/tabular-data/tabular-data.compone
 import { ReadMorePopupComponent } from './resources/read-more-popup/read-more-popup.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserManagementComponent } from './admin/user-management/user-management.component';
+import { AddUserComponent } from './admin/user-management/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { UserManagementComponent } from './admin/user-management/user-management
     TabularDataComponent,
     ReadMorePopupComponent,
     DashboardComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

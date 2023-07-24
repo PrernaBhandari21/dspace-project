@@ -1,0 +1,19 @@
+.main__heading{
+    font-size: 24px !important;
+    margin: 0px 0px 20px 0px !important;
+    padding: 0px;
+    line-height: 28px;
+    font-weight: 600 !important;
+    text-transform: none;
+    color: #005b9e;
+}
+
+.add_user_heading{
+    font-size: 22px !important;
+    color: #000;
+    margin: 0px;
+    text-transform: none;
+    line-height: normal !important;
+    font-weight: 800 !important;
+    margin-bottom: 10px !important;
+}

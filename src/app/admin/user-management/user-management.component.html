@@ -36,7 +36,7 @@
         <input matInput [(ngModel)]="searchQuery" (ngModelChange)="filterData()" placeholder="Enter search term">
       </mat-form-field>
   
-      <button type="button" class="btn btn-info mb-3 flex">
+      <button type="button" class="btn btn-info mb-3 flex" (click)="openAddUserDialog()">
         <span style="display: flex;">
           <mat-icon>add</mat-icon>
           <span>Add User</span> 
@@ -47,7 +47,7 @@
 
   </div>
   
-  <mat-table [dataSource]="filteredDataSource" class="table-wrapper">
+  <mat-table [dataSource]="pagedDataSource" class="table-wrapper">
     <!-- Define the First Name column -->
     <ng-container matColumnDef="first Name">
       <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
@@ -119,3 +119,15 @@
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
   
+
+
+
+
+  <mat-paginator
+  #paginator
+  [pageSize]="pageSize"
+  [pageIndex]="currentPage"
+  [length]="filteredDataSource.length"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  (page)="onPageChanged($event)" [showFirstLastButtons]="true"
+></mat-paginator>
