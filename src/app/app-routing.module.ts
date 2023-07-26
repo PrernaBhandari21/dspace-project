@@ -8,6 +8,8 @@ import { SignUpComponent } from './shared/sign-up/sign-up.component';
 import { TabularDataComponent } from './shared/tabular-data/tabular-data.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserManagementComponent } from './admin/user-management/user-management.component';
+import { UserDataUploadComponent } from './admin/user-data-upload/user-data-upload.component';
+import { ReportsComponent } from './admin/reports/reports.component';
 
 const routes: Routes = [
   // {path:'',
@@ -55,6 +57,14 @@ const routes: Routes = [
   {
     path:"admin-user-management", 
     component:UserManagementComponent
+  },
+  {
+    path:"admin-user-data-upload", 
+    component:UserDataUploadComponent
+  },
+  {
+    path:"admin-reports", 
+    component:ReportsComponent
   }
 ];
 

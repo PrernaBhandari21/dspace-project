@@ -16,6 +16,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,12 @@ import { ReadMorePopupComponent } from './resources/read-more-popup/read-more-po
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserManagementComponent } from './admin/user-management/user-management.component';
 import { AddUserComponent } from './admin/user-management/add-user/add-user.component';
+import { EditUserComponent } from './admin/user-management/edit-user/edit-user.component';
+import { ResetPasswordComponent } from './admin/user-management/reset-password/reset-password.component';
+import { UserDataUploadComponent } from './admin/user-data-upload/user-data-upload.component';
+import { ReportsComponent } from './admin/reports/reports.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -48,7 +55,11 @@ import { AddUserComponent } from './admin/user-management/add-user/add-user.comp
     ReadMorePopupComponent,
     DashboardComponent,
     UserManagementComponent,
-    AddUserComponent
+    AddUserComponent,
+    EditUserComponent,
+    ResetPasswordComponent,
+    UserDataUploadComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +77,10 @@ import { AddUserComponent } from './admin/user-management/add-user/add-user.comp
     MatFormFieldModule,
     MatSelectModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    NgApexchartsModule,
+    MatCardModule
 
   ],
   providers: [],

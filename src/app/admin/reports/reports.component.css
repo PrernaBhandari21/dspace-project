@@ -1,0 +1,38 @@
+select {
+    border: 1px solid #e3e5f3 !important;
+    padding: 10px 10px;
+    width: 100%;
+    background: #fff;
+    color: #999;
+    outline: none;
+}
+
+.date_div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.report_div{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row{
+    margin-bottom: 10px;
+}
+
+.form-row h5{
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+}
+
+@media screen and (max-width:370px) {
+    .date_div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

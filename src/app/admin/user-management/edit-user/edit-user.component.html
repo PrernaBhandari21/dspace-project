@@ -6,7 +6,7 @@ padding-right: 15px;">
         Administrator Panel
     </h1>
 
-    <h2 class="add_user_heading">Add User</h2>
+    <h2 class="add_user_heading">Edit Account for "{{data["first Name"]}} {{data["last Name"]}}" </h2>
 
 
     <div class="container">
@@ -37,19 +37,6 @@ padding-right: 15px;">
 					</div>
 				</div>
 			</div>
-
-            <div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<input type="text" formControlName="password" id="password" placeholder="PASSWORD" class="form-control" required>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<input type="text" formControlName="vpassword" id="vpassword" placeholder="VERIFY PASSWORD" class="form-control" required>
-					</div>
-				</div>
-			</div>
 			
 			<div class="row">
 				
@@ -61,8 +48,8 @@ padding-right: 15px;">
                                 <option value="administrator">Administrator</option>
                                 <option value="member">Member</option>
                                 <option value="non-member">Non Member</option>
-                                <option value="preferNo">Prefer not to say</option>
-                                <option value="other">Other</option>
+                                <option value="Group A">Group A</option>
+                                <option value="Group B">Group B</option>
                         </select>                     
                     </div>
                   </div>
@@ -75,10 +62,23 @@ padding-right: 15px;">
 					</div>
 				</div>
 			</div>
+			
+            <div class="row">
 				
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <select formControlName="status" class="form-control-dropdown" required>
+                              <option disabled selected value>Select</option>
+                              <option value="Active">Active</option>
+                              <option value="Deactivate">Deactivate</option>
+                      </select>                     
+                  </div>
+                </div>
+          </div>
+
 			<div class="row">
 				<div class="col-md-4">
-					<button type="submit" id="submit" class="btn btn-primary btn-block">Register</button>
+					<button type="submit" id="submit" class="btn btn-primary btn-block">Submit</button>
 				</div>
 			</div>
 

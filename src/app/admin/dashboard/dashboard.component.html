@@ -4,4 +4,44 @@
 
 <div class="body">
 
+    <div class="charts-row">
+
+        <mat-card class="example-card">
+            <mat-card-content>
+                <div id="chart">
+                    <apx-chart
+                      [series]="chartOptions1.series"
+                      [labels]="chartOptions1.labels"
+                      [chart]="chartOptions1.chart"
+                      [dataLabels]="chartOptions1.dataLabels"
+                      [plotOptions]="chartOptions1.plotOptions"
+                      [yaxis]="chartOptions1.yaxis"
+                      [xaxis]="chartOptions1.xaxis"
+                      [legend]="chartOptions1.legend"
+                      [colors]="chartOptions1.colors"
+                      [grid]="chartOptions1.grid"
+                    ></apx-chart>
+                  </div>
+            </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="example-card">
+            <mat-card-content>
+    
+          <div id="chart">
+            <apx-chart
+              [series]="chartOptions2.series"
+              [chart]="chartOptions2.chart"
+              [labels]="chartOptions2.labels"
+              [colors]="chartOptions2.colors"
+              [legend]="chartOptions2.legend"
+            ></apx-chart>
+          </div>
+
+        </mat-card-content>
+         </mat-card>
+    </div>
+
+
+      
 </div>

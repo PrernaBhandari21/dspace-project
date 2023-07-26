@@ -3,6 +3,8 @@ import dataSource from '../../../assets/users-data.json';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { AddUserComponent } from './add-user/add-user.component';
 import { MatDialog } from '@angular/material/dialog';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @Component({
   selector: 'app-user-management',
@@ -88,10 +90,9 @@ onPageChanged(event: PageEvent) {
 
   openAddUserDialog(): void {
     const dialogRef = this.dialog.open(AddUserComponent, {
-      width: '400px', // Adjust the width as needed
-      // Optionally pass data to the dialog if required
-      // data: { /* your data */ }
-    });
+      width: '687px', 
+      height:'507px'
+       });
 
     dialogRef.afterClosed().subscribe((result: any) => {
       // Handle the result returned from the dialog if needed
@@ -102,6 +103,21 @@ onPageChanged(event: PageEvent) {
         // User clicked Cancel or clicked outside the dialog
       }
     });
+  }
+
+  editUser(element:any){
+    console.log("Element is : ",element);
+    this.dialog.open(EditUserComponent, {
+      data:element,
+      height:"500px"
+    })
+  }
+
+  resetPassword(element : any){
+    this.dialog.open(ResetPasswordComponent,{
+      data:element,
+      height:"300px"
+    })
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="admin_main_heading">
-    <h1>Admin Panel >> User Management</h1>
+    <h1>Admin Panel >> </h1>
   </div>
   
   <h2 class="table-heading">User Management</h2>
@@ -101,7 +101,7 @@
     <!-- Define the Password Reset column -->
     <ng-container matColumnDef="password Reset">
       <mat-header-cell *matHeaderCellDef> Password Reset </mat-header-cell>
-      <mat-cell *matCellDef="let element">
+      <mat-cell *matCellDef="let element" (click)="resetPassword(element)" style="cursor: pointer;">
         <mat-icon>lock</mat-icon>
       </mat-cell>
     </ng-container>
@@ -109,7 +109,7 @@
     <!-- Define the Edit column -->
     <ng-container matColumnDef="edit">
       <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
-      <mat-cell *matCellDef="let element">
+      <mat-cell *matCellDef="let element" (click)="editUser(element)" style="cursor: pointer;">
         <mat-icon>edit</mat-icon>
       </mat-cell>
     </ng-container>
